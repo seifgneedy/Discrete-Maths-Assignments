@@ -47,21 +47,5 @@ public class Set {
 		}
 		return result;
 	}
-//	public static void main(String [] args) {
-//		Set a=new Set();
-//		String[] str= {"seif","gneedy","ans","seif","mohamed","gneedy",};
-//		for(String s:str)
-//			a.add(s);
-//		Set b=new Set();
-//		String[] str2= {"elnagar","tasaly","seif","phone","water","gneedy","ans","atatll"};
-//		for(String s:str2)
-//			b.add(s);
-//		String[] str3= {"elnagar","tasaly","seif","phone","water","gneedy","ans","atatll","mohamed","sara","salma","noha","abeer"};
-//		Set c=new Set(str3.length);
-//		for(String s:str3)
-//			c.add(s);
-//		
-//		System.out.println(a.complement(c));
-//		
-//	}
+	
 }
