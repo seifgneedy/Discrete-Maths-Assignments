@@ -19,10 +19,12 @@ public class Main {
 		for(int i=1; i<=n; i++) {
 			System.out.print("Enter the number of elements in set "+i+": ");
 			int temp = input.nextInt();
+			Set set=new Set(temp);
 			System.out.println("\nPlease Enter them each one on a separate line :");
 			input.nextLine();// ignoring the empty line
 			for(int j=0; j<temp; j++)
-				sets.get(j).add(input.nextLine());
+				set.add(input.nextLine());
+			sets.add(set);
 		}
 		boolean working = true;
 		while(working) {
@@ -38,23 +40,23 @@ public class Main {
 			switch(op) {
 			case 1:
 				System.out.println("which two sets to unite or -1 for back (ex: 1 2) : ");
-				one = input.nextInt();
+				one = input.nextInt()-1;
 				if(one == -1)
 					break;
-				two = input.nextInt();
+				two = input.nextInt()-1;
 				result = sets.get(one).union(sets.get(two));
 				break;
 			case 2:
 				System.out.println("which two sets to intersect or -1 for back (ex: 1 2) : ");
-				one = input.nextInt();
+				one = input.nextInt()-1;
 				if(one == -1)
 					break;
-				two = input.nextInt();
+				two = input.nextInt()-1;
 				result = sets.get(one).intersection(sets.get(two));
 				break;
 			case 3:
 				System.out.println("which two sets to unite or -1 for back (ex: 2) : ");
-				one = input.nextInt();
+				one = input.nextInt()-1;
 				if(one == -1)
 					break;
 				result = sets.get(one).complement(uni);
@@ -67,7 +69,8 @@ public class Main {
 				for(int i=0; i<size; i++)
 					System.out.println(result.get(i));
 			}
-		}
+		} 
+		input.close();
 	}
 	
 }

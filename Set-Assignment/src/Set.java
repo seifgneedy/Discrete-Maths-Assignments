@@ -11,6 +11,7 @@ public class Set {
 	}
 	
 	public void add(String input ) {
+		input=input.trim();
 		if(!values.contains(input))
 			values.add(input);
 	}
